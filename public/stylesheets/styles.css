@@ -1,0 +1,7 @@
+html { background: #df2265; }
+body { width: 500px; margin: 0 auto; background: #e52468; border: 1px solid #fff; padding: 0 10px; margin-top: 50px; }
+
+#gmaps4rails_map {
+	width: 500px;
+	height: 300px;
+}

@@ -1,4 +1,7 @@
-<h2>Noodle Location</h2>
+<% @page_title = "Say something?" %>
+
+<h2>Noodle Your Location</h2>
+<h3><%= link_to("Messages", {:action => 'list'}, :class => 'link-nav') %></h3>
 
 <%= gmaps4rails(@json) %>
 

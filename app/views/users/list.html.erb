@@ -1,18 +1,42 @@
-<h2>List of Posts</h2>
+<% @page_title = "Read some messages!" %>
+
+<h2>List of Messages</h2>
+<h3><%= link_to("Write a Noodle", {:action => 'index'}, :class => 'back-link') %></h3>
 
 <%= gmaps4rails(@json) %>
 
+<table>
+	<tr>
+		<th>Noodler</th>
+		<th>Posts</th>
+		<th>Latitude</th>
+		<th>Longitude</th>
+	</tr>
+<% @users.each do |user| %>	
+	<tr>
+		<td><span><%= user.name %></span></td>
+		<td><span><%= user.posts.size %></span></td>
+		<td><span><%= user.latitude %></span></td>
+		<td><span><%= user.longitude %></span></td>
+	</tr>
+<% end %>
+</table>
 
-<% @users.each do |user| %>
-	<span><%= user.name %></span>
-	<span><%= user.posts.size %></span>
-	<span><%= user.latitude %></span>
-	<span><%= user.longitude %></span><br />
-<% end %>
 <br />
+
+<table>
+	<tr>
+		<th>Address</th>
+		<th>Latitude</th>
+		<th>Longitude</th>
+		<th>Message</th>
+	</tr>
 <% @posts.each do |post| %>
-	<span><%= post.content %></span>
-	<span><%= post.latitude %></span>
-	<span><%= post.longitude %></span>
-	<span><%= post.address %></span><br />
+	<tr>
+		<td><span><%= post.content %></span></td>
+		<td><span><%= post.latitude %></span></td>
+		<td><span><%= post.longitude %></span></td>
+		<td><span><%= post.address %></span></td>
+	</tr>
 <% end %>
+</table>
