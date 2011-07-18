@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 	
 	def index
 		@user = User.new
+		@user.posts.new
 	end
 	
 	def list
@@ -32,6 +33,10 @@ class UsersController < ApplicationController
 		else
 			render('edit')
 		end
+	end
+	
+	def post_attributes=(post_attributes)
+		@user.posts.new(post_attributes)
 	end
 	
 end

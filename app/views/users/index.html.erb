@@ -1,1 +1,11 @@
 <h2>Noodle Location</h2>
+
+<%= form_for(:user, :url => {:action => 'create'}) do |user| %>
+	<%= user.label :name %>
+	<%= user.text_field :name %>
+	<%= user.fields_for :post do |post| %>
+		<%= post.label :content %>
+		<%= post.text_area :content %>
+	<% end %>
+	<%= user.submit %>
+<% end %>
