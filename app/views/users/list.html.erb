@@ -1,0 +1,7 @@
+<h2>List of Posts</h2>
+
+<% @posts.each do |post| %>
+	<span><%= post.content %></span>
+	<span><%= post.latitude %></span>
+	<span><%= post.longitude %></span>
+<% end %>
