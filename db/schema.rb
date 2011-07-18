@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(:version => 20110718030721) do
   create_table "posts", :force => true do |t|
     t.integer  "user_id"
     t.text     "content"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
