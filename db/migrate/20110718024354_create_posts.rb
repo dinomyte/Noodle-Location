@@ -7,6 +7,8 @@ class CreatePosts < ActiveRecord::Migration
 	  t.text "content"
 	  t.float "latitude"
 	  t.float "longitude"
+	  t.string "address"
+	  t.boolean 'gmaps'
       t.timestamps
     end
   end

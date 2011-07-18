@@ -1,7 +1,18 @@
 <h2>List of Posts</h2>
 
+<%= gmaps4rails(@json) %>
+
+
 <% @users.each do |user| %>
 	<span><%= user.name %></span>
+	<span><%= user.posts.size %></span>
 	<span><%= user.latitude %></span>
-	<span><%= user.longitude %></span>
+	<span><%= user.longitude %></span><br />
+<% end %>
+<br />
+<% @posts.each do |post| %>
+	<span><%= post.content %></span>
+	<span><%= post.latitude %></span>
+	<span><%= post.longitude %></span>
+	<span><%= post.address %></span><br />
 <% end %>

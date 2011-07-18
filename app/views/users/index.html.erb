@@ -1,11 +1,17 @@
 <h2>Noodle Location</h2>
 
+<%= gmaps4rails(@json) %>
+
 <%= form_for @user, :url => {:action => 'create'} do |user| %>
-	<%= user.label :name %>
+	<%= user.label :name %><br />
 	<%= user.text_field :name %><br />
+	<%= user.hidden_field :latitude %>
+	<%= user.hidden_field :longitude %>
 	<%= user.fields_for :posts do |post| %>
-		<%= post.label :content %>
-		<%= post.text_area :content, :size => '25x10' %>
+		<%= post.label :address %><br />
+		<%= post.text_field :address %><br />
+		<%= post.label :content %><br />
+		<%= post.text_area :content, :size => '25x10' %><br />
 	<% end %>
-	<%= user.submit %>
+	<%= user.submit "Submit Noodle" %>
 <% end %>

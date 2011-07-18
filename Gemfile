@@ -7,6 +7,7 @@ gem 'rails', '3.0.9'
 
 gem 'mysql', '~> 2.8.1'
 gem "gmaps4rails", "~> 0.10.0"
+gem "geocoder", "~> 1.0.2"
 
 # Use unicorn as the web server
 # gem 'unicorn'
