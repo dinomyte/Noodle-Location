@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       # foreign key
       t.integer "user_id"
       # regular
-	  t.text "content"
+	  t.string "content"
 	  t.float "latitude"
 	  t.float "longitude"
 	  t.string "address"

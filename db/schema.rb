@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20110718030721) do
 
   create_table "posts", :force => true do |t|
     t.integer  "user_id"
-    t.text     "content"
+    t.string   "content"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "address"

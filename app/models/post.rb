@@ -5,4 +5,14 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 	validates_presence_of :content
 	
+	def gmaps4rails_infowindow
+      # add here whatever html content you desire, it will be displayed when users clicks on the marker
+      "<p>#{content}</p>"
+    end
+    
+    def gmaps4rails_title
+      # add here whatever text you desire
+      "#{address}"
+    end
+    	
 end
