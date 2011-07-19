@@ -32,11 +32,6 @@ h3 a {
 
 h3 a:hover { background: #C21955; color: #fff; }
 
-#gmaps4rails_map {
-	width: 500px;
-	height: 300px;
-}
-
 .info_window { font-size: 17px; color: #0E0E0E; margin-top: 10px;}
 
 table {
