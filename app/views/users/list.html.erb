@@ -22,8 +22,6 @@
 <% end %>
 </table>
 
-<br />
-
 <table>
 	<tr>
 		<th>Address</th>
@@ -33,10 +31,10 @@
 	</tr>
 <% @posts.each do |post| %>
 	<tr>
-		<td><span><%= post.content %></span></td>
+		<td><span><%= post.address.truncate(20) %></span></td>
 		<td><span><%= post.latitude %></span></td>
 		<td><span><%= post.longitude %></span></td>
-		<td><span><%= post.address %></span></td>
+		<td><span><%= post.content.truncate(20) %></span></td>
 	</tr>
 <% end %>
 </table>

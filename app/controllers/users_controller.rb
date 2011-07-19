@@ -23,7 +23,8 @@ class UsersController < ApplicationController
 			flash[:notice] = "You have just made a post!"
 			redirect_to(:action => 'list')
 		else
-			render('new')
+			@json = Post.all.to_gmaps4rails
+			render('index')
 		end
 	end
 	
@@ -38,6 +39,7 @@ class UsersController < ApplicationController
 			flash[:notice] = "You have just updated your post!"
 			redirect_to(:action => 'list')
 		else
+			@json = Post.all.to_gmaps4rails
 			render('edit')
 		end
 	end

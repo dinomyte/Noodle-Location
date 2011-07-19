@@ -1,7 +1,72 @@
 html { background: #df2265; }
-body { width: 500px; margin: 0 auto; background: #e52468; border: 1px solid #fff; padding: 0 10px; margin-top: 50px; }
+body {
+	width: 500px;
+	margin: 0 auto;
+	background: #E93B79;
+	border: 26px solid #E93B79;
+	padding: 0 10px;
+	margin-top: 50px;
+	border-radius: 30px;
+}
+
+h2 {
+	font-size: 40px;
+	text-align: center;
+	margin: 0;
+	color: #fff;
+	font-style: italic;
+	text-transform: lowercase;
+	background: #E94A82;
+	border: 5px solid #E94A82;
+	border-radius: 15px;
+}
+
+h3 a {
+	height: 10px;
+	background: #fff;
+	padding: 5px;
+	color: #C21955;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+h3 a:hover { background: #C21955; color: #fff; }
 
 #gmaps4rails_map {
 	width: 500px;
 	height: 300px;
 }
+
+table {
+	width: 100%;
+	margin: 10px 0;
+	color: #fff;
+	background: #D82A67;
+	padding: 10px;
+}
+
+input {
+	border: 4px solid #E5E5E5;
+	height: 25px;
+}
+
+textarea {
+	border: 5px solid #E5E5E5;
+}
+
+#new_user {
+	margin: 15px 0 20px 0;
+}
+
+label {
+	text-transform: uppercase;
+	color: #e5e5e5;
+	font-weight: bold;
+}
+
+.field_with_errors { display: inline; }
+.field_with_errors label { color: black; background: yellow; }
+
+.fleft { float: left;}
+.fright { float: right; }
+.clear { clear: both; }

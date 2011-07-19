@@ -6,15 +6,18 @@
 <%= gmaps4rails(@json) %>
 
 <%= form_for @user, :url => {:action => 'create'} do |user| %>
-	<%= user.label :name %><br />
-	<%= user.text_field :name %><br />
-	<%= user.hidden_field :latitude %>
-	<%= user.hidden_field :longitude %>
+	<div class="fleft">
+		<%= user.label :name %><br />
+		<%= user.text_field :name %>
+	</div>
 	<%= user.fields_for :posts do |post| %>
-		<%= post.label :address %><br />
-		<%= post.text_field :address %><br />
+		<div class="fright">
+			<%= post.label :address %><br />
+			<%= post.text_field :address %>
+		</div>
+		<div class="clear"><br />
 		<%= post.label :content %><br />
-		<%= post.text_area :content, :size => '25x10' %><br />
+		<%= post.text_area :content, :size => '58x10' %><br />
 	<% end %>
 	<%= user.submit "Submit Noodle" %>
 <% end %>
