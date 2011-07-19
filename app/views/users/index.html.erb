@@ -3,7 +3,7 @@
 <h2>Noodle Your Location</h2>
 <h3><%= link_to("Messages", {:action => 'list'}, :class => 'link-nav') %></h3>
 
-<%= gmaps("map_options" => { "detect_location" => true, "center_on_user" => true, "zoom" => 10},"markers" => { "data" => @json }) %>
+<%= gmaps4rails(@json) %>
 
 <%= form_for @user, :url => {:action => 'create'} do |user| %>
 	<div class="fleft">
