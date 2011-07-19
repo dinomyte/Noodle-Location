@@ -37,6 +37,8 @@ h3 a:hover { background: #C21955; color: #fff; }
 	height: 300px;
 }
 
+.info_window { font-size: 17px; color: #0E0E0E; margin-top: 10px;}
+
 table {
 	width: 100%;
 	margin: 10px 0;
@@ -62,6 +64,16 @@ label {
 	text-transform: uppercase;
 	color: #e5e5e5;
 	font-weight: bold;
+}
+
+.notice {
+	background: #7AEA5C;
+	text-align: center;
+	font-size: 17px;
+	padding: 5px;
+	margin-bottom: 14px;
+	border-radius: 10px;
+	color: #606060;
 }
 
 .field_with_errors { display: inline; }

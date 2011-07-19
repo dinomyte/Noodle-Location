@@ -2,6 +2,7 @@ NoodleLocation::Application.routes.draw do
 	
   root :to => "users#index"
   match "/messages", :to => "users#list"
+  match "/error", :to => "users#create"
   match ':controller(/:action(/:id(.:format)))'
   	
   # The priority is based upon order of creation:

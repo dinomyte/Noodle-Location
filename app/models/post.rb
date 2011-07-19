@@ -7,12 +7,12 @@ class Post < ActiveRecord::Base
 	
 	def gmaps4rails_infowindow
       # add here whatever html content you desire, it will be displayed when users clicks on the marker
-      "<p>#{content}</p>"
+      "<h2>#{user.name}</h2><p class='info_window'>#{content}</p>"
     end
     
     def gmaps4rails_title
       # add here whatever text you desire
-      "#{address}"
+      "#{user.name}"
     end
     	
 end

@@ -11,10 +11,18 @@
   
 </head>
 <body>
+	<div>
+		
+		<% if !flash[:notice].blank? %>
+		<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+		<% end %>
+		
+		<%= yield %>
+		<%= yield :scripts %>
 
-<%= yield %>
-<%= yield :scripts %>
-
+	</div>
 </body>
 
 </html>

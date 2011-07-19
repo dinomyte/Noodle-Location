@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 			redirect_to(:action => 'list')
 		else
 			@json = Post.all.to_gmaps4rails
+			flash[:notice] = "Error - Please fill the marked fields below!"
 			render('index')
 		end
 	end
