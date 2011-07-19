@@ -1,0 +1,40 @@
+<% @page_title = "Read some messages!" %>
+
+<h2>List of Messages</h2>
+<h3><%= link_to("Write a Noodle", {:action => 'index'}, :class => 'back-link') %></h3>
+
+<%= gmaps4rails(@json) %>
+
+<table>
+	<tr>
+		<th>Noodler</th>
+		<th>Address</th>
+		<th>Latitude</th>
+		<th>Longitude</th>
+	</tr>
+<% @users.each do |user| %>	
+	<tr>
+		<td><span><%= user.name %></span></td>
+		<td><span><%= user.address %></span></td>
+		<td><span><%= user.latitude %></span></td>
+		<td><span><%= user.longitude %></span></td>
+	</tr>
+<% end %>
+</table>
+
+<table>
+	<tr>
+		<th>Address</th>
+		<th>Latitude</th>
+		<th>Longitude</th>
+		<th>Message</th>
+	</tr>
+<% @posts.each do |post| %>
+	<tr>
+		<td><span><%= post.address.truncate(20) %></span></td>
+		<td><span><%= post.latitude %></span></td>
+		<td><span><%= post.longitude %></span></td>
+		<td><span><%= post.content.truncate(20) %></span></td>
+	</tr>
+<% end %>
+</table>
