@@ -5,36 +5,12 @@
 
 <%= gmaps4rails(@json) %>
 
-<table>
-	<tr>
-		<th>Noodler</th>
-		<th>Address</th>
-		<th>Latitude</th>
-		<th>Longitude</th>
-	</tr>
+<div class="noodles">
 <% @users.each do |user| %>	
-	<tr>
-		<td><span><%= user.name %></span></td>
-		<td><span><%= user.address %></span></td>
-		<td><span><%= user.latitude %></span></td>
-		<td><span><%= user.longitude %></span></td>
-	</tr>
-<% end %>
-</table>
-
-<table>
-	<tr>
-		<th>Address</th>
-		<th>Latitude</th>
-		<th>Longitude</th>
-		<th>Message</th>
-	</tr>
-<% @posts.each do |post| %>
-	<tr>
-		<td><span><%= post.address.truncate(20) %></span></td>
-		<td><span><%= post.latitude %></span></td>
-		<td><span><%= post.longitude %></span></td>
-		<td><span><%= post.content.truncate(20) %></span></td>
-	</tr>
+	<div class="noodle_item">
+		<p class="fleft meta"><%= user.name %> - <%= user.post.created_at %></p><p class="fright meta"><%= user.address %></p>
+		<div class="clear"></div>
+		<p class="content"><%= user.post.content %></p>
+	</div>
 <% end %>
 </table>
