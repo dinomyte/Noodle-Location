@@ -8,14 +8,14 @@
 <table>
 	<tr>
 		<th>Noodler</th>
-		<th>Posts</th>
+		<th>Address</th>
 		<th>Latitude</th>
 		<th>Longitude</th>
 	</tr>
 <% @users.each do |user| %>	
 	<tr>
 		<td><span><%= user.name %></span></td>
-		<td><span><%= user.posts.size %></span></td>
+		<td><span><%= user.address %></span></td>
 		<td><span><%= user.latitude %></span></td>
 		<td><span><%= user.longitude %></span></td>
 	</tr>

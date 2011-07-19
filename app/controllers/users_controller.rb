@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 	
 	def index
 		@user = User.new
-		@user.posts.build
+		@post = @user.build_post
+		@location = request.location
 		@json = Post.all.to_gmaps4rails
 	end
 	
@@ -16,11 +17,15 @@ class UsersController < ApplicationController
 		@user = User.new(params[:user])
 		
 		@location = request.location
+		@user[:address] = @location.address
 		@user[:latitude] = @location.latitude
 		@user[:longitude] = @location.longitude
-				
+		@user.post[:address] = @location.address
+		@user.post[:latitude] = @location.latitude
+		@user.post[:longitude] = @location.longitude
+		
 		if @user.save
-			flash[:notice] = "You have just made a post!"
+			flash[:notice] = "Thanks for noodlin!"
 			redirect_to(:action => 'list')
 		else
 			@json = Post.all.to_gmaps4rails

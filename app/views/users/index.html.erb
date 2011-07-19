@@ -10,11 +10,7 @@
 		<%= user.label :name %><br />
 		<%= user.text_field :name %>
 	</div>
-	<%= user.fields_for :posts do |post| %>
-		<div class="fright">
-			<%= post.label :address %><br />
-			<%= post.text_field :address %>
-		</div>
+	<%= user.fields_for :post do |post| %>
 		<div class="clear"><br />
 		<%= post.label :content %><br />
 		<%= post.text_area :content, :size => '58x10' %><br />
